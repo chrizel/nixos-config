@@ -23,7 +23,7 @@
   networking.hostName = "dev";
 
   # Set your time zone.
-  time.timeZone = "America/Los_Angeles";
+  time.timeZone = "Europe/Berlin";
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
   # Per-interface useDHCP will be mandatory in the future, so this generated config
@@ -103,6 +103,11 @@
       xrandr --newmode "6016x3384_60.00"  1768.50  6016 6544 7216 8416  3384 3387 3392 3503 -hsync +vsync
       xrandr --addmode Virtual-1 6016x3384_60.00
       xrandr -s 6016x3384_60.00
+    '')
+    (writeShellScriptBin "xrandr-5k" ''
+      xrandr --newmode "5120x2880R"  938.25  5120 5168 5200 5280  2880 2883 2888 2962 +hsync -vsync
+      xrandr --addmode Virtual-1 5120x2880R
+      xrandr -s 5120x2880R
     '')
     (writeShellScriptBin "xrandr-mbp" ''
       xrandr -s 2880x1800
