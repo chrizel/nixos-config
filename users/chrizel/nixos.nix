@@ -4,9 +4,9 @@
   # https://github.com/nix-community/home-manager/pull/2408
   environment.pathsToLink = [ "/share/fish" ];
 
-  users.users.mitchellh = {
+  users.users.chrizel = {
     isNormalUser = true;
-    home = "/home/mitchellh";
+    home = "/home/chrizel";
     extraGroups = [ "docker" "wheel" ];
     shell = pkgs.fish;
     initialPassword = "test";
